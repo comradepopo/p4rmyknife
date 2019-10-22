@@ -7,7 +7,7 @@ Made with <3 by <img src="https://github.com/comradepopo/p4rmyknife/raw/master/a
 
 ### To-Do List/Plans 
 ##### (No particular order of priority)
-1) Client Install - User will be able to install the P4 Helix Visual client via this tool, and be taken through the fields needed to create the p4config file, as outlined [here](https://asm-demo.assembla.com/spaces/cs-perforce-test/perforce-7/instructions). This should be the first module.
+1) Client Install - User will be able to install the P4 Helix Visual client via this tool, and be taken through the fields needed to create the p4config file, as outlined [here](https://asm-demo.assembla.com/spaces/cs-perforce-test/perforce-7/instructions). This should be the first feature.
 
 2) Perforce Instance Monitoring - Transcribe [locks.pl](https://swarm.workshop.perforce.com/files/guest/dan_bloch/locks.pl) written by Dan Bloch, into Python and implement as module. This would be a very helpful function of the tool. 
 
