@@ -19,4 +19,5 @@ Made with <3 by <img src="https://github.com/comradepopo/p4rmyknife/raw/master/a
 
 6) Add functionality that allows users to point to files at URLs where they can go pull down the checkpoint/logs. 
 
+7) $PATH verification
 More to come...
