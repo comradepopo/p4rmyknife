@@ -13,16 +13,23 @@ def install_client(args):
     if args.os.startswith('linux'):
         #p4_url = 'http://www.perforce.com/downloads/perforce/r19.2/bin.linux26x86_64/p4v.tgz'
         #The below line (line 16) is for testing purposes only, and is not intended for the final product.
-        p4_url = 'https://louis-test-p4k.s3.us-east-2.amazonaws.com/TestFile.sh'
+        p4_url = 'https://louis-test-p4k.s3.us-east-2.amazonaws.com/p4v.tgz'
     #urllib.request.urlretrieve(p4_url, 'p4v.tgz')
-    urllib.request.urlretrieve(p4_url, 'TestFile.sh')
-    #Verify file exists below.
     try:
-        f =open("TestFile.sh")
+        local_filename, request_headers = urllib.request.urlretrieve(p4_url,'p4v.tgz')
+        html = open(local_filename)
+        print (local_filename, request_headers)
+        html.close()
+    except:
+      print ("Unable to access desired server contents.")
+      #check to make sure file was successfully downloaded
+    try:
+        f =open("p4v.tgz")
+        #Perform File Operations (Reading and Writing a File)
         f.close()
     except:
         print ("File is not accessible.")
+
     
     
-    #11/27/19 Need to add lines that will output 200s or the standard range of error codes (300,400,500s) if there is a server-side issue.
-    #11/27/19 cont.- Code to output any client-side errors should also be added. Next to add code that will execute/run the downloaded file.
+    #11/27/19 Next to add code that will execute/run the downloaded file.
