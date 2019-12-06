@@ -24,12 +24,26 @@ def install_client(args):
       print ("Unable to access desired server contents.")
       #check to make sure file was successfully downloaded
     try:
-        f =open("p4v.tgz")
+        local_filename, request_headers = urllib.request.urlretrieve(p4_url,'p4v.tgz')
+        html = open(local_filename)
+        print (local_filename, request_headers)
+        html.close()
+    except:
+      print ("Unable to access desired server contents.")
+      sys.exit()
+    try:
+        f = open("p4v.tgz")
         #Perform File Operations (Reading and Writing a File)
         f.close()
     except:
         print ("File is not accessible.")
+        sys.exit()
 
+    #unzip .tgz
+    if ("p4v".endswith(".tgz")):
+        tar = tarfile.open("p4v", "r:tgz")
+        tar.extractall()
+        tar.close()
     
     
     #11/27/19 Next to add code that will execute/run the downloaded file.
