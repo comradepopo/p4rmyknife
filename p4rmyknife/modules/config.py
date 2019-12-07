@@ -1,4 +1,6 @@
 import urllib.request
+import tarfile
+import os
 
 def run(args):
     if args.install_client:
