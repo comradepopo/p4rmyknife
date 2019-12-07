@@ -39,11 +39,13 @@ def install_client(args):
         print ("File is not accessible.")
         sys.exit()
 
-    #unzip .tgz
-    if ("p4v".endswith(".tgz")):
-        tar = tarfile.open("p4v", "r:tgz")
-        tar.extractall()
-        tar.close()
-    
-    
-    #11/27/19 Next to add code that will execute/run the downloaded file.
+    #Get current directory
+    p4vinspath = os.getcwd()
+    print ("Extracting installer archive to %s" % p4vinspath)
+    #Extract to said directory
+    tf = tarfile.open("p4v.tgz")
+    tf.extractall(p4vinspath)
+
+    #Execute client executable- helixmfa
+    exec(open("./p4v-2019.2.1883366/bin/helixmfa").read())
+
