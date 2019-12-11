@@ -46,8 +46,12 @@ def install_client(args):
     print ("Extracting installer archive to %s" % p4vinspath)
     #Extract to said directory
     tf = tarfile.open("p4v.tgz")
-    tf.extractall(p4vinspath)
-
+    if tarfile.is_tarfile("p4v.tgz"):
+        tf.extractall(p4vinspath)
+    os.chdir("p4v-2019.2.1883366/bin")
     #Execute client executable- helixmfa
-    exec(open("./p4v-2019.2.1883366/bin/helixmfa").read())
+    os.system("helixmfa")
+
+
+
 
