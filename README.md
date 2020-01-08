@@ -21,4 +21,8 @@ Made with <3 by <img src="https://github.com/comradepopo/p4rmyknife/raw/master/a
 
 7) $PATH verification.
 
+8) Built-in stress-testing/load-testing
+
+9) Potential for automated installation of Perforce in Assembla Single-Tenant instances. (To be used in lieu of salt)
+
 More to come...
