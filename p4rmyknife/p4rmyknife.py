@@ -25,7 +25,7 @@ config_parser.add_argument('--install-client', action='store_true',
                     help='install client environment')
 
 
-
+#this is a comment
 
 # Set some defaults that are used by all sub modules
 parser.set_defaults(os=sys.platform)
